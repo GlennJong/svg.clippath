@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SVG animation</title>
+  <style type="text/css">
+  	body {
+  		margin: 0;
+  		padding: 0;
+  		/*background: hsl(140,50%,50%);*/
+  	}
+  	@keyframes letterDraw {
+  		to {
+  			stroke-dashoffset: 0;
+  		}
+  	}
+  	.wrapper {
+  		position: absolute;
+		display: -webkit-flex;
+		display:         flex;
+		-webkit-align-items: center;
+	    	align-items: center;
+		-webkit-justify-content: center;
+	      justify-content: center;
+	      width: 100%;
+	      height: 100%;
+  	}
+  	.mysvg {
+  		width: 600px;
+  		height: auto;
+  	}
+  	.mysvg .line {
+  		fill: none;
+  		stroke-width:  20;
+  		stroke: hsl(0,0%,70%);
+  		stroke-linecap: round;
+  		stroke-linejoin: round;
+  	}
+  	.mysvg .line .line-g {
+            stroke-width:  8;
+            stroke: hsl(0,70%,60%);
+		stroke-dasharray: 340;
+		stroke-dashoffset: 340;
+		animation: letterDraw 5s linear forwards;
+  	}
+  	.mysvg .line .line-l {
+		stroke-dasharray: 150;
+		stroke-dashoffset: 150;
+		animation: letterDraw .5s linear .5s forwards;
+  	}
+  	.mysvg .line .line-e {
+		stroke-dasharray: 180;
+		stroke-dashoffset: 180;
+		animation: letterDraw .5s linear 1s forwards;
+  	}
+  	.mysvg .line .line-n1 {
+		stroke-dasharray: 180;
+		stroke-dashoffset: 180;
+		animation: letterDraw .5s linear 1.5s forwards;
+  	}
+  	.mysvg .line .line-n2 {
+		stroke-dasharray: 180;
+		stroke-dashoffset: 180;
+		animation: letterDraw .5s linear 2s forwards;
+  	}
+  	
+  </style>
+</head>
+<body>
+	<div class="wrapper">
+		<svg class="mysvg" x="0px" y="0px" viewBox="0 0 400 400">
+			<g class="line">
+                      <path fill="none" d="M249.25,146.5c0,0-21.375-31-53.875-6s-46.688,77.75-25.188,93.25s44.781,5.75,57.281,0
+                      s30.744-19.703,28.505-33.977s-29.481-17.023-58.731,0.477"/>
+                      <path class="line-g" d="M394,394V278V123c0-5.522-4.477-10-10-10l0,0c-5.523,0-10,4.478-10,10v155c0,5.522-4.477,10-10,10l0,0
+                  c-5.523,0-10-4.478-10-10V123c0-5.522-4.477-10-10-10l0,0c-5.523,0-10,4.478-10,10v155c0,5.522-4.477,10-10,10l0,0
+                  c-5.523,0-10-4.478-10-10V123c0-5.522-4.477-10-10-10l0,0c-5.523,0-10,4.478-10,10v152c0,5.522-4.477,10-10,10l0,0
+                  c-5.523,0-10-4.478-10-10v-36c0-69-24.75-92.5-24.75-92.5s-21.375-31-53.875-6s-46.688,77.75-25.188,93.25s44.781,5.75,57.281,0
+                  s30.744-19.703,28.505-33.977s-29.481-17.023-58.731,0.477L181.913,206c0,0-54.913,24-54.913-45v-36c0-5.522-4.477-10-10-10l0,0
+                  c-5.523,0-10,4.478-10,10v152c0,5.522-4.477,10-10,10l0,0c-5.523,0-10-4.478-10-10V122c0-5.522-4.477-10-10-10l0,0
+                  c-5.523,0-10,4.478-10,10v155c0,5.522-4.477,10-10,10l0,0c-5.523,0-10-4.478-10-10V122c0-5.522-4.477-10-10-10l0,0
+                  c-5.523,0-10,4.478-10,10v155c0,5.522-4.477,10-10,10l0,0c-5.523,0-10-4.478-10-10V122V6"/>
+			</g>
+
+		</svg>
+	</div>
+</body>
+</html>
